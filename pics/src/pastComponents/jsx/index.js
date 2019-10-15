@@ -14,7 +14,7 @@ function getTime() {
 }
 
 //Create a react Component
-const App = () => {
+const AppJSX = () => {
   //   const buttonText = ["Click Me!", 1];
   const buttonText = { text: "Click Me 3" };
 
@@ -29,11 +29,11 @@ const App = () => {
         {/* {getButtonText()} */}
       </button>
       <h3>{getTime()}</h3>
-      <h3>{getTime()}</h3>
     </div>
   );
 };
 
 // Take the React Component and show it on the screen
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+// ReactDOM.render(<App />, document.querySelector("#root"));
+export default AppJSX;

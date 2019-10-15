@@ -3,7 +3,7 @@ import React from "react";
 import faker from "faker";
 
 const getSeason = (lat, month) => {
-  console.log("month :", month);
+  // console.log("month :", month);
   if (month > 2 && month < 9) {
     return lat > 0 ? "summer" : "winter";
   } else return lat > 0 ? "winter" : "summer";
@@ -21,10 +21,10 @@ const season_config = {
 };
 
 const SeasonDisplay = props => {
-  console.log("props :", props);
+  // console.log("props :", props);
   const season = getSeason(props.lat, faker.date.future().getMonth());
   const { text, icon_name } = season_config[season];
-  console.log("season_def :", season_config);
+  // console.log("season_def :", season_config);
   return (
     <div className={`season-display ${season}`}>
       <i className={`icon-left massive icon ${icon_name}`} />

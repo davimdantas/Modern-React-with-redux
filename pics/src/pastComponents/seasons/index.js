@@ -1,9 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import SeasonDisplay from "./SeasonDisplay";
 import Spinner from "./Spinner";
 
-class App extends React.Component {
+class AppSeasons extends React.Component {
   state = { lat: null, error_message: "" };
   // 	constructor(props) {
   //     super(props);
@@ -12,7 +12,7 @@ class App extends React.Component {
   //   }
 
   componentDidMount() {
-    console.log("componentDidMoun st :");
+    // console.log("componentDidMoun st :");
     window.navigator.geolocation.getCurrentPosition(
       position => this.setState({ lat: position.coords.latitude }),
       err => this.setState({ error_message: err.message })
@@ -39,4 +39,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+export default AppSeasons;
+// ReactDOM.render(<App />, document.querySelector("#root"));

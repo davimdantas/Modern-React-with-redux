@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import CommentDetail from "./CommentDetail";
 import ApprovalCard from "./ApprovalCard";
 import faker from "faker";
@@ -8,7 +8,7 @@ const options = {
   hour: "2-digit",
   minute: "2-digit"
 };
-const App = () => {
+const AppComponents = () => {
   return (
     <div className="ui container comments" style={{ marginTop: "15px" }}>
       <ApprovalCard>Are you sure you want to do this?</ApprovalCard>
@@ -48,4 +48,5 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+export default AppComponents;
+// ReactDOM.render(<App />, document.querySelector("#root"));
