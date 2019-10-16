@@ -8,10 +8,11 @@ import App from "../components/App";
 class Past extends React.Component {
   state = { tabSelected: 0 };
   pastComponents = [<App />, <AppJSX />, <AppComponents />, <AppSeasons />];
+  // pastComponents = [<App />];
 
-  changeTab(index) {
+  changeTab = index => {
     this.setState({ tabSelected: index });
-  }
+  };
 
   renderTabs() {
     return this.pastComponents.map((item, index) => (
@@ -29,7 +30,7 @@ class Past extends React.Component {
       <div>
         <TabBar
           itens={["current", "jsx", "Components", "Seasons"]}
-          changeTab={this.changeTab.bind(this)}
+          changeTab={this.changeTab}
           // changeTab={this.changeTab}
         />
         {this.renderTabs()}

@@ -1,13 +1,13 @@
 //Import the React and ReactDOM libraries
 
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 
 //Others
 
-function getButtonText() {
-  return "click On Me 2!";
-}
+// function getButtonText() {
+//   return "click On Me 2!";
+// }
 
 function getTime() {
   return new Date().toLocaleTimeString();
