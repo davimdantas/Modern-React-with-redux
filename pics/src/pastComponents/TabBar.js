@@ -3,9 +3,9 @@ import React from "react";
 class TabBar extends React.Component {
   renderContent(itens, action) {
     return itens.map((item, index) => (
-      <a className="item" key={index} onClick={() => action(index)}>
+      <button className="item" key={index} onClick={() => action(index)}>
         {item}
-      </a>
+      </button>
     ));
   }
 

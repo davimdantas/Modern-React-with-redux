@@ -4,7 +4,7 @@ class SearchBar extends React.Component {
   // onInputChange(event) {
   //   console.log("event.target.value :", event.target.value);
   // }
-  state = { term: "" };
+  state = { term: "cachorro" };
 
   // onFormSubmit(event) {
   //   event.preventDefault();
