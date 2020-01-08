@@ -19,6 +19,8 @@ class Past extends React.Component {
       <TabContent
         key={index}
         is_active={this.state.tabSelected === index ? "active" : ""}
+
+        // is_active={this.state.tabSelected === index}
       >
         {item}
       </TabContent>
