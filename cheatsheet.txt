@@ -1,0 +1,9 @@
+constructor(props) {
+        super(props);
+
+        this.imageRef = React.createRef();
+}
+
+<img ref={this.imageRef}
+
+----------------------------------------------------------------

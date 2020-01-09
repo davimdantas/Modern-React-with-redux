@@ -1,27 +1,30 @@
 import React from 'react';
 
 class ImageCard extends React.Component {
-    state = {img_height: 0}
     
-    getSpan = (ratio) => {
-        // console.log('ratio :', ratio, Math.floor(ratio / 0.5));
-        // return `span ${Math.floor(ratio / 0.5) ? Math.floor(ratio / 0.5) : 1}`;
-        return `span ${Math.floor(this.state.img_height / 110) ? Math.floor(this.state.img_height / 110) : 1}`;
-    };
+    constructor(props) {
+        super(props);
+        this.state = {spans: 0}
+        this.imageRef = React.createRef();
+    }
 
-    onImgLoad = ({target: image}) => {
-        this.setState({img_height: image.offsetHeight})
+    componentDidMount() {
+        this.imageRef.current.addEventListener('load', this.setSpans)
+    }
+    
+    setSpans = () => {
+        const height = this.imageRef.current.clientHeight;
+        const spans = Math.ceil(height/10)
+        this.setState({spans})
     }
 
     render() {
-        // const { description, urls, height, width } = this.props.image;
         const { description, urls } = this.props.image;
 
         return (
-            // <div style={{ gridRowEnd: this.getSpan(Math.round(height / width * 100) / 100) }}>
-            <div style={{ gridRowEnd: this.getSpan() }}>
+            <div style={{ gridRowEnd: `span  ${this.state.spans}` }}>
                 <img
-                    onLoad={this.onImgLoad}
+                    ref={this.imageRef}
                     alt={description}
                     src={urls.regular}
                 />
