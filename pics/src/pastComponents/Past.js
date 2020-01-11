@@ -5,11 +5,11 @@ import AppJSX from "./jsx/index";
 import AppComponents from "./components_section/index";
 import AppSeasons from "./seasons/index";
 import AppSplash from "./splash/AppSplash";
-import App from "../components/App";
+import Current from "../current/Current";
 class Past extends React.Component {
   state = { tabSelected: 0 };
-  pastComponents = [<App />, <AppSplash /> ,<AppJSX />, <AppComponents />, <AppSeasons />];
-  // pastComponents = [<App />];
+  pastComponents = [<Current />, <AppSplash /> ,<AppJSX />, <AppComponents />, <AppSeasons />];
+  // pastComponents = [<Current />];
 
   changeTab = index => {
     this.setState({ tabSelected: index });
@@ -40,7 +40,7 @@ class Past extends React.Component {
 
         {/* 
         <TabContent is_active={this.state.tabSelected == 0 ? "active" : ""}>
-          <App />
+          <Current />
         </TabContent>
         <TabContent is_active={this.state.tabSelected == 1 ? "active" : ""}>
           <AppJSX />
