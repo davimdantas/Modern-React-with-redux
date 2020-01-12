@@ -6,10 +6,11 @@ import AppComponents from "./components_section/index";
 import AppSeasons from "./seasons/index";
 import AppSplash from "./splash/AppSplash";
 import AppVideo from "./videos/AppVideo";
+import AppSong from "./songs/AppSong"
 import Current from "../current/Current";
 class Past extends React.Component {
   state = { tabSelected: 0 };
-  pastComponents = [<Current />, <AppVideo />, <AppSplash />, <AppJSX />, <AppComponents />, <AppSeasons />];
+  pastComponents = [<Current />, < AppSong />, <AppVideo />, <AppSplash />, <AppJSX />, <AppComponents />, <AppSeasons />];
   // pastComponents = [<Current />];
 
   changeTab = index => {
@@ -33,7 +34,7 @@ class Past extends React.Component {
     return (
       <div>
         <TabBar
-          itens={["current", "Videos", "Splash", "jsx", "Components", "Seasons"]}
+          itens={["current", "Songs", "Videos", "Splash", "jsx", "Components", "Seasons"]}
           changeTab={this.changeTab}
         // changeTab={this.changeTab}
         />
