@@ -24,7 +24,7 @@ class Past extends React.Component {
 
       // is_active={this.state.tabSelected === index}
       >
-        {item}
+        {this.state.tabSelected === index ? item : null}
       </TabContent>
     ));
   }
