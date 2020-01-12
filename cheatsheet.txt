@@ -1,3 +1,8 @@
+-youtube -doubleclick
+
+
+----------------------------------------------------------------
+
 constructor(props) {
         super(props);
 
@@ -7,3 +12,44 @@ constructor(props) {
 <img ref={this.imageRef}
 
 ----------------------------------------------------------------
+
+let obj = { prim: 1, seg:2, ter:3, quart:4 }
+undefined
+const {prim, seg } = obj
+undefined
+prim
+1
+
+----------------------------------------------------------------
+
+
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+
+import reducers from './reducers';
+import SongList from './components/SongList';
+import SongDetail from './components/SongDetail'
+
+class Current extends React.Component {
+
+  render() {
+    return (
+      <Provider store={createStore(reducers)}>
+        <div className="ui container grid">
+          <div className="ui row">
+            <div className="column eight wide">
+              <SongList />
+            </div>
+            <div className="column four wide">
+              <SongDetail />
+            </div>
+          </div>
+        </div>
+      </Provider>
+    );
+  }
+}
+
+export default Current;
