@@ -26,6 +26,7 @@ class AppVideo extends React.Component {
   }
 
   render() {
+    console.log('state :', this.state);
     return (
       <div className="ui container" >
         <SearchBar onFormSubmit={this.onTermSubmit} />

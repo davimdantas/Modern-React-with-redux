@@ -26,19 +26,19 @@ class SongDetail extends Component {
                         <audio className='audio_player' controls autoPlay src={song.preview}></audio>
                     </div>
                     <div className="content">
-                        <a className="header">{song.artist.name}</a>
+                        <code className="header">{song.artist.name}</code>
                         <div className="meta">
                             <span className="date">{song.album.title}</span>
                         </div>
-                        <div className="description">
+                        <a href={song.link} className="description">
                             {song.title}
-                        </div>
+                        </a>
                     </div>
                     <div className="extra content">
-                        <a>
+                        <div>
                             <i className="clock icon"></i>
                             {Math.floor(song.duration / 60)}:{song.duration % 60 ? song.duration % 60 : '00'}
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
