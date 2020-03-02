@@ -1,4 +1,16 @@
 import jsonPlaceHolder from '../apis/jsonPlaceHolder';
+import getUnique from '../../utils/getUnique'
+
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
+    await dispatch(fetchPosts());
+    const posts = getState().posts;
+
+    const userIds = getUnique(posts, 'userId')
+
+    userIds.forEach((id) => {
+        dispatch(fetchUser(id))
+    })
+}
 
 export const fetchPosts = () => async dispatch => {
     const response = await jsonPlaceHolder.get('/posts');
